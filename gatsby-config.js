@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Form Offline - Offline data collection app for Google Forms™`,
+    description: '',
+    keywords: '',
   },
   plugins: [`gatsby-plugin-react-helmet`],
 }

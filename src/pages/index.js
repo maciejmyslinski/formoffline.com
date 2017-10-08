@@ -19,6 +19,7 @@ import fillAFormOffline2x from '../img/fill-a-form-offline@2x.png'
 import fillAFormOffline3x from '../img/fill-a-form-offline@3x.png'
 
 const Header = styled.div`
+  color: #fff;
   background-image: linear-gradient(142deg, #b388ff 0%, #7c4dff 100%);
 `
 

@@ -36,6 +36,15 @@ const TemplateWrapper = ({ children }) => (
         href="https://fonts.googleapis.com/css?family=Roboto:400,500"
         rel="stylesheet"
       />
+      <script id="mcjs">
+        !function(c,h,i,m,p){
+          ((m = c.createElement(h)),
+          (p = c.getElementsByTagName(h)[0]),
+          (m.async = 1),
+          (m.src = i),
+          p.parentNode.insertBefore(m, p))
+        }(document,"script","https://chimpstatic.com/mcjs-connected/js/users/2650d6b046101d75b4da2718e/bce654a8f187fc58824a49c90.js");
+      </script>
     </Helmet>
     {children()}
   </div>

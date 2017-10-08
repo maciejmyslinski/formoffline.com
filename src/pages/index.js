@@ -160,7 +160,7 @@ const SubscriptionInput = styled.input`
   border-radius: 2px;
 `
 
-const SubscriptionButton = styled.input`
+const SubscriptionButton = styled.button`
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
@@ -293,10 +293,9 @@ const IndexPage = () => (
             value=""
           />
         </div>
-        <SubscriptionButton
-          type="submit"
-          value="It's worth $5 a month to me, notify me when I can try it"
-        />
+        <SubscriptionButton type="submit">
+          It's worth $5 a month to me, notify me when I can try it
+        </SubscriptionButton>
       </SubscriptionForm>
     </Subscription>
   </div>

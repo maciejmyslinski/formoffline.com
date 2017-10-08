@@ -160,7 +160,7 @@ const SubscriptionInput = styled.input`
   border-radius: 2px;
 `
 
-const SubscriptionButton = styled.button`
+const SubscriptionButton = styled.input`
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
@@ -268,11 +268,35 @@ const IndexPage = () => (
       <SubscriptionIncentive>
         Subscribe to get notified when the app goes live
       </SubscriptionIncentive>
-      <SubscriptionForm>
-        <SubscriptionInput type="email" placeholder="Email address" />
-        <SubscriptionButton type="submit">
-          It's worth $5 a month to me, notify me when I can try it
-        </SubscriptionButton>
+      <SubscriptionForm
+        action="//maciejmyslinski.us15.list-manage.com/subscribe/post?u=2650d6b046101d75b4da2718e&amp;id=46f9aeb156"
+        method="post"
+        id="mc-embedded-subscribe-form"
+        name="mc-embedded-subscribe-form"
+        class="validate"
+        target="_blank"
+        novalidate
+      >
+        <SubscriptionInput
+          type="email"
+          placeholder="Email address"
+          name="EMAIL"
+        />
+        <div
+          style={{ position: 'absolute', left: '-5000px' }}
+          aria-hidden="true"
+        >
+          <input
+            type="text"
+            name="b_2650d6b046101d75b4da2718e_46f9aeb156"
+            tabindex="-1"
+            value=""
+          />
+        </div>
+        <SubscriptionButton
+          type="submit"
+          value="It's worth $5 a month to me, notify me when I can try it"
+        />
       </SubscriptionForm>
     </Subscription>
   </div>

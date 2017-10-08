@@ -131,6 +131,45 @@ const PriceDescription = styled.p`
   line-height: 24px;
   color: rgba(0, 0, 0, 0.54);
   text-align: center;
+  margin: 0 auto;
+`
+
+const Subscription = styled.div`
+  margin: 144px 0 120px;
+  padding: 8px;
+`
+
+const SubscriptionIncentive = styled.p`
+  margin: 0 0 24px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 24px;
+`
+
+const SubscriptionForm = styled.form`
+  display: flex;
+  flex-flow: column nowrap;
+`
+
+const SubscriptionInput = styled.input`
+  background-color: #fff8ce;
+  border: 0;
+  height: 48px;
+  padding: 14px 12px;
+  z-index: 1;
+  border-radius: 2px;
+`
+
+const SubscriptionButton = styled.button`
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: #ffea00;
+  border: 0;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  padding: 12px;
 `
 
 const IndexPage = () => (
@@ -225,15 +264,17 @@ const IndexPage = () => (
       </Price>
       <PriceDescription>per user per month</PriceDescription>
     </Pricing>
-    <div>
-      <p>Subscribe to get notified when the app goes live</p>
-      <form>
-        <input type="email" placeholder="Email address" />
-        <button type="submit">
+    <Subscription>
+      <SubscriptionIncentive>
+        Subscribe to get notified when the app goes live
+      </SubscriptionIncentive>
+      <SubscriptionForm>
+        <SubscriptionInput type="email" placeholder="Email address" />
+        <SubscriptionButton type="submit">
           It's worth $5 a month to me, notify me when I can try it
-        </button>
-      </form>
-    </div>
+        </SubscriptionButton>
+      </SubscriptionForm>
+    </Subscription>
   </div>
 )
 

@@ -57,6 +57,51 @@ const AppMockup = styled.img`
   display: none;
 `
 
+const Step = styled.div`
+  margin: 120px auto 0;
+  padding: 0 8px;
+  max-width: 100vw;
+  overflow: hidden;
+`
+
+const StepHeader = styled.div`
+  display: flex;
+`
+
+const StepNumber = styled.span`
+  font-weight: 500;
+  font-size: 112px;
+  line-height: 120px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.08);
+  flex: 0 0 64px;
+  margin: 0 16px 0 0;
+`
+
+const StepTitleWrapper = styled.div`
+  flex: 1 1;
+`
+
+const StepTitle = styled.h2`
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  margin: 24px 0 0;
+`
+
+const StepDescription = styled.p`
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.54);
+  margin: 0;
+`
+
+const StepImage = styled.img`
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+`
+
 const IndexPage = () => (
   <div>
     <Header>
@@ -90,23 +135,37 @@ const IndexPage = () => (
       src={appMockup}
       alt="Form Offline app"
     />
-    <div>
-      <span>1</span>
-      <h2>Create a form</h2>
-      <p>using Google Forms™ creator you love</p>
-      <img src={createAForm} alt="Form Offline app" />
-    </div>
-    <div>
-      <span>2</span>
-      <h2>Make it offline ready</h2>
-      <p>with a click of a button</p>
-      <img src={makeItOfflineReady} alt="Form Offline app" />
-    </div>
-    <div>
-      <span>3</span>
-      <h2>Install the app on your phone</h2>
-      <p>or a tablet</p>
-      <img
+    <Step>
+      <StepHeader>
+        <StepNumber>1</StepNumber>
+        <StepTitleWrapper>
+          <StepTitle>Create a form</StepTitle>
+          <StepDescription>
+            using Google Forms™ creator you love
+          </StepDescription>
+        </StepTitleWrapper>
+      </StepHeader>
+      <StepImage src={createAForm} alt="Form Offline app" />
+    </Step>
+    <Step>
+      <StepHeader>
+        <StepNumber>2</StepNumber>
+        <StepTitleWrapper>
+          <StepTitle>Make it offline ready</StepTitle>
+          <StepDescription>with a click of a button</StepDescription>
+        </StepTitleWrapper>
+      </StepHeader>
+      <StepImage src={makeItOfflineReady} alt="Form Offline app" />
+    </Step>
+    <Step>
+      <StepHeader>
+        <StepNumber>3</StepNumber>
+        <StepTitleWrapper>
+          <StepTitle>Install the app on your phone</StepTitle>
+          <StepDescription>or a tablet</StepDescription>
+        </StepTitleWrapper>
+      </StepHeader>
+      <StepImage
         srcSet={`
           ${installTheApp},
           ${installTheApp2x} 2x,
@@ -115,13 +174,19 @@ const IndexPage = () => (
         src={installTheApp}
         alt="Form Offline app"
       />
-    </div>
-    <div>
-      <span>4</span>
-      <h2>Fill the form offline</h2>
-      <p>it will be submittend when your phone connects to the Internet</p>
-      <img src={fillAFormOffline} alt="Form Offline app" />
-    </div>
+    </Step>
+    <Step>
+      <StepHeader>
+        <StepNumber>4</StepNumber>
+        <StepTitleWrapper>
+          <StepTitle>Fill the form offline</StepTitle>
+          <StepDescription>
+            it will be submittend when your phone connects to the Internet
+          </StepDescription>
+        </StepTitleWrapper>
+      </StepHeader>
+      <StepImage src={fillAFormOffline} alt="Form Offline app" width="90" />
+    </Step>
     <div>
       <p>
         <span>$</span>

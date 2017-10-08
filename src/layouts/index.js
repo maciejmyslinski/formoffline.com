@@ -15,6 +15,7 @@ injectGlobal`
   html, body {
     -webkit-font-smoothing: antialiased;
     font-family: 'Roboto', sans-serif;
+    color: rgba(0, 0, 0, .87);
   }
 
   *, *:before, *:after {

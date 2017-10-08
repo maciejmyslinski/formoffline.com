@@ -30,6 +30,14 @@ const Logo = styled.img`
   height: 72px;
 `
 
+const Title = styled.h1`
+  text-align: center;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 48px;
+  margin: 72px auto 0;
+`
+
 const IndexPage = () => (
   <div>
     <Header>
@@ -42,7 +50,7 @@ const IndexPage = () => (
         src={logo}
         alt="Form Offline logo image"
       />
-      <h1>Offline data collection app for Google Forms™</h1>
+      <Title>Offline data collection app for Google Forms™</Title>
       <p>so your employees waste no time wherever they are</p>
       <img
         srcSet={`

@@ -1,25 +1,25 @@
-import React from "react";
-import styled from 'styled-components';
-import logo from "../img/logo.png";
-import logo2x from "../img/logo@2x.png";
-import logo3x from "../img/logo@3x.png";
-import appView from "../img/app-view.png";
-import appView2x from "../img/app-view@2x.png";
-import appView3x from "../img/app-view@3x.png";
-import appMockup from "../img/app-mockup.png";
-import appMockup2x from "../img/app-mockup@2x.png";
-import appMockup3x from "../img/app-mockup@3x.png";
-import createAForm from "../img/create-a-form.gif";
-import makeItOfflineReady from "../img/make-it-offline-ready.gif";
-import installTheApp from "../img/install-the-app.png";
-import installTheApp2x from "../img/install-the-app@2x.png";
-import installTheApp3x from "../img/install-the-app@3x.png";
-import fillAFormOffline from "../img/fill-a-form-offline.png";
-import fillAFormOffline2x from "../img/fill-a-form-offline@2x.png";
-import fillAFormOffline3x from "../img/fill-a-form-offline@3x.png";
+import React from 'react'
+import styled from 'styled-components'
+import logo from '../img/logo.png'
+import logo2x from '../img/logo@2x.png'
+import logo3x from '../img/logo@3x.png'
+import appView from '../img/app-view.png'
+import appView2x from '../img/app-view@2x.png'
+import appView3x from '../img/app-view@3x.png'
+import appMockup from '../img/app-mockup.png'
+import appMockup2x from '../img/app-mockup@2x.png'
+import appMockup3x from '../img/app-mockup@3x.png'
+import createAForm from '../img/create-a-form.gif'
+import makeItOfflineReady from '../img/make-it-offline-ready.gif'
+import installTheApp from '../img/install-the-app.png'
+import installTheApp2x from '../img/install-the-app@2x.png'
+import installTheApp3x from '../img/install-the-app@3x.png'
+import fillAFormOffline from '../img/fill-a-form-offline.png'
+import fillAFormOffline2x from '../img/fill-a-form-offline@2x.png'
+import fillAFormOffline3x from '../img/fill-a-form-offline@3x.png'
 
 const Header = styled.div`
-  background-image: linear-gradient(142deg, #B388FF 0%, #7C4DFF 100%);
+  background-image: linear-gradient(142deg, #b388ff 0%, #7c4dff 100%);
 `
 
 const IndexPage = () => (
@@ -98,10 +98,12 @@ const IndexPage = () => (
       <p>Subscribe to get notified when the app goes live</p>
       <form>
         <input type="email" placeholder="Email address" />
-        <button type="submit">It's worth $5 a month to me, notify me when I can try it</button>
+        <button type="submit">
+          It's worth $5 a month to me, notify me when I can try it
+        </button>
       </form>
     </div>
   </div>
-);
+)
 
-export default IndexPage;
+export default IndexPage

@@ -46,6 +46,17 @@ const Subtitle = styled.p`
   text-align: center;
 `
 
+const AppView = styled.img`
+  border-bottom: 14px solid #673ab7;
+  padding: 0 0 48px 0;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  margin: 0 auto 96px;
+`
+
+const AppMockup = styled.img`
+  display: none;
+`
+
 const IndexPage = () => (
   <div>
     <Header>
@@ -60,25 +71,25 @@ const IndexPage = () => (
       />
       <Title>Offline data collection app for Google Forms™</Title>
       <Subtitle>so your employees waste no time wherever they are</Subtitle>
-      <img
-        srcSet={`
-          ${appView},
-          ${appView2x} 2x,
-          ${appView3x} 3x
-        `}
-        src={appView}
-        alt="Form Offline app"
-      />
-      <img
-        srcSet={`
-          ${appMockup},
-          ${appMockup2x} 2x,
-          ${appMockup3x} 3x
-        `}
-        src={appMockup}
-        alt="Form Offline app"
-      />
     </Header>
+    <AppView
+      srcSet={`
+        ${appView},
+        ${appView2x} 2x,
+        ${appView3x} 3x
+      `}
+      src={appView}
+      alt="Form Offline app"
+    />
+    <AppMockup
+      srcSet={`
+        ${appMockup},
+        ${appMockup2x} 2x,
+        ${appMockup3x} 3x
+      `}
+      src={appMockup}
+      alt="Form Offline app"
+    />
     <div>
       <span>1</span>
       <h2>Create a form</h2>

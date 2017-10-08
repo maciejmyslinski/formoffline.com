@@ -81,6 +81,20 @@ const IndexPage = () => (
       <p>it will be submittend when your phone connects to the Internet</p>
       <img src={fillAFormOffline} alt="Form Offline app" />
     </div>
+    <div>
+      <p>
+        <span>$</span>
+        <span>5</span>
+      </p>
+      <p>per user per month</p>
+    </div>
+    <div>
+      <p>Subscribe to get notified when the app goes live</p>
+      <form>
+        <input type="email" placeholder="Email address" />
+        <button type="submit">It's worth $5 a month to me, notify me when I can try it</button>
+      </form>
+    </div>
   </div>
 );
 

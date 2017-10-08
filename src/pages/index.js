@@ -23,6 +23,7 @@ const Header = styled.div`
   background-image: linear-gradient(142deg, #b388ff 0%, #7c4dff 100%);
   display: flex;
   flex-flow: column nowrap;
+  padding: 0 8px;
 `
 
 const Logo = styled.img`
@@ -38,6 +39,13 @@ const Title = styled.h1`
   margin: 72px auto 0;
 `
 
+const Subtitle = styled.p`
+  margin: 24px auto 96px;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+`
+
 const IndexPage = () => (
   <div>
     <Header>
@@ -51,7 +59,7 @@ const IndexPage = () => (
         alt="Form Offline logo image"
       />
       <Title>Offline data collection app for Google Forms™</Title>
-      <p>so your employees waste no time wherever they are</p>
+      <Subtitle>so your employees waste no time wherever they are</Subtitle>
       <img
         srcSet={`
           ${appView},

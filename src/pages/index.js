@@ -102,6 +102,37 @@ const StepImage = styled.img`
   display: block;
 `
 
+const Pricing = styled.div`
+  margin: 270px auto 0;
+  display: flex;
+  flex-flow: column nowrap;
+`
+
+const Price = styled.div`
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+`
+
+const PriceCurrency = styled.div`
+  font-size: 45px;
+  line-height: 96px;
+  color: rgba(0, 0, 0, 0.54);
+`
+
+const PriceValue = styled.div`
+  font-weight: 500;
+  font-size: 112px;
+  line-height: 120px;
+`
+
+const PriceDescription = styled.p`
+  font-size: 24px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.54);
+  text-align: center;
+`
+
 const IndexPage = () => (
   <div>
     <Header>
@@ -187,13 +218,13 @@ const IndexPage = () => (
       </StepHeader>
       <StepImage src={fillAFormOffline} alt="Form Offline app" width="90" />
     </Step>
-    <div>
-      <p>
-        <span>$</span>
-        <span>5</span>
-      </p>
-      <p>per user per month</p>
-    </div>
+    <Pricing>
+      <Price>
+        <PriceCurrency>$</PriceCurrency>
+        <PriceValue>5</PriceValue>
+      </Price>
+      <PriceDescription>per user per month</PriceDescription>
+    </Pricing>
     <div>
       <p>Subscribe to get notified when the app goes live</p>
       <form>

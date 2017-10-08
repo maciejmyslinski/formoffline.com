@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import logo from '../img/logo.png'
-import logo2x from '../img/logo@2x.png'
-import logo3x from '../img/logo@3x.png'
+import logo from '../img/logo-transparent.png'
+import logo2x from '../img/logo-transparent@2x.png'
+import logo3x from '../img/logo-transparent@3x.png'
 import appView from '../img/app-view.png'
 import appView2x from '../img/app-view@2x.png'
 import appView3x from '../img/app-view@3x.png'
@@ -21,12 +21,19 @@ import fillAFormOffline3x from '../img/fill-a-form-offline@3x.png'
 const Header = styled.div`
   color: #fff;
   background-image: linear-gradient(142deg, #b388ff 0%, #7c4dff 100%);
+  display: flex;
+  flex-flow: column nowrap;
+`
+
+const Logo = styled.img`
+  margin: 24px auto 0;
+  height: 72px;
 `
 
 const IndexPage = () => (
   <div>
     <Header>
-      <img
+      <Logo
         srcSet={`
           ${logo},
           ${logo2x} 2x,

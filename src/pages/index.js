@@ -65,7 +65,15 @@ const IndexPage = () => (
       <span>3</span>
       <h2>Install the app on your phone</h2>
       <p>or a tablet</p>
-      <img src={makeItOfflineReady} alt="Form Offline app" />
+      <img
+        srcSet={`
+          ${installTheApp},
+          ${installTheApp2x} 2x,
+          ${installTheApp3x} 3x
+        `}
+        src={installTheApp}
+        alt="Form Offline app"
+      />
     </div>
     <div>
       <span>4</span>

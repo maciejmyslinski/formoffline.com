@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "gatsby-link";
+import styled from 'styled-components';
 import logo from "../img/logo.png";
 import logo2x from "../img/logo@2x.png";
 import logo3x from "../img/logo@3x.png";
@@ -18,37 +18,43 @@ import fillAFormOffline from "../img/fill-a-form-offline.png";
 import fillAFormOffline2x from "../img/fill-a-form-offline@2x.png";
 import fillAFormOffline3x from "../img/fill-a-form-offline@3x.png";
 
+const Header = styled.div`
+  background-image: linear-gradient(142deg, #B388FF 0%, #7C4DFF 100%);
+`
+
 const IndexPage = () => (
   <div>
-    <img
-      srcSet={`
-        ${logo},
-        ${logo2x} 2x,
-        ${logo3x} 3x
-      `}
-      src={logo}
-      alt="Form Offline logo image"
-    />
-    <h1>Offline data collection app for Google Forms™</h1>
-    <p>so your employees waste no time wherever they are</p>
-    <img
-      srcSet={`
-        ${appView},
-        ${appView2x} 2x,
-        ${appView3x} 3x
-      `}
-      src={appView}
-      alt="Form Offline app"
-    />
-    <img
-      srcSet={`
-        ${appMockup},
-        ${appMockup2x} 2x,
-        ${appMockup3x} 3x
-      `}
-      src={appMockup}
-      alt="Form Offline app"
-    />
+    <Header>
+      <img
+        srcSet={`
+          ${logo},
+          ${logo2x} 2x,
+          ${logo3x} 3x
+        `}
+        src={logo}
+        alt="Form Offline logo image"
+      />
+      <h1>Offline data collection app for Google Forms™</h1>
+      <p>so your employees waste no time wherever they are</p>
+      <img
+        srcSet={`
+          ${appView},
+          ${appView2x} 2x,
+          ${appView3x} 3x
+        `}
+        src={appView}
+        alt="Form Offline app"
+      />
+      <img
+        srcSet={`
+          ${appMockup},
+          ${appMockup2x} 2x,
+          ${appMockup3x} 3x
+        `}
+        src={appMockup}
+        alt="Form Offline app"
+      />
+    </Header>
     <div>
       <span>1</span>
       <h2>Create a form</h2>

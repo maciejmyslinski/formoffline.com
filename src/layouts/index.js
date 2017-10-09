@@ -18,6 +18,10 @@ injectGlobal`
     color: rgba(0, 0, 0, .87);
   }
 
+  button {
+    font-family: 'Roboto', sans-serif;
+  }
+
   *, *:before, *:after {
     box-sizing: inherit;
   }

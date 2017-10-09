@@ -306,7 +306,7 @@ const IndexPage = () => (
         <StepTitleWrapper>
           <StepTitle>Fill the form offline</StepTitle>
           <StepDescription>
-            it will be submittend when your phone connects to the Internet
+            it will be submitted when your phone connects to the Internet
           </StepDescription>
         </StepTitleWrapper>
       </StepHeader>

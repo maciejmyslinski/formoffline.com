@@ -20,7 +20,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "deploy": "yarn build && firebase deploy",
+    "deploy": "rimraf public && yarn build && firebase deploy",
     "optimizeImg": "imagemin src/img/* --plugin pngquant --out-dir src/img",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -28,6 +28,7 @@
   "devDependencies": {
     "imagemin-cli": "^3.0.0",
     "imagemin-pngquant": "^5.0.1",
-    "prettier": "^1.6.1"
+    "prettier": "^1.6.1",
+    "rimraf": "^2.6.2"
   }
 }

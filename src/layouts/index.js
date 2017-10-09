@@ -3,9 +3,16 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import { injectGlobal } from 'styled-components'
 import Helmet from 'react-helmet'
+import WebFont from 'webfontloader'
 
 import 'normalize.css/normalize.css'
 import config from '../../gatsby-config'
+
+WebFont.load({
+  google: {
+    families: ['Roboto:400,500'],
+  },
+})
 
 injectGlobal`
   html {
@@ -35,12 +42,7 @@ const TemplateWrapper = ({ children }) => (
         { name: 'description', content: config.siteMetadata.title },
         { name: 'keywords', content: config.siteMetadata.keywords },
       ]}
-    >
-      <link
-        href="https://fonts.googleapis.com/css?family=Roboto:400,500"
-        rel="stylesheet"
-      />
-    </Helmet>
+    />
     {children()}
   </div>
 )

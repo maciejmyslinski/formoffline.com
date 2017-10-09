@@ -8,12 +8,6 @@ import WebFont from 'webfontloader'
 import 'normalize.css/normalize.css'
 import config from '../../gatsby-config'
 
-WebFont.load({
-  google: {
-    families: ['Roboto:400,500'],
-  },
-})
-
 injectGlobal`
   html {
     box-sizing: border-box;
@@ -34,18 +28,30 @@ injectGlobal`
   }
 `
 
-const TemplateWrapper = ({ children }) => (
-  <div>
-    <Helmet
-      title={config.siteMetadata.title}
-      meta={[
-        { name: 'description', content: config.siteMetadata.title },
-        { name: 'keywords', content: config.siteMetadata.keywords },
-      ]}
-    />
-    {children()}
-  </div>
-)
+class TemplateWrapper extends React.Component {
+  componentDidMount() {
+    WebFont.load({
+      google: {
+        families: ['Roboto:400,500'],
+      },
+    })
+  }
+
+  render() {
+    return (
+      <div>
+        <Helmet
+          title={config.siteMetadata.title}
+          meta={[
+            { name: 'description', content: config.siteMetadata.title },
+            { name: 'keywords', content: config.siteMetadata.keywords },
+          ]}
+        />
+        {this.props.children()}
+      </div>
+    )
+  }
+}
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func,

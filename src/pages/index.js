@@ -344,8 +344,7 @@ const IndexPage = () => (
           <input
             type="text"
             name="b_2650d6b046101d75b4da2718e_46f9aeb156"
-            tabindex="-1"
-            value=""
+            tabIndex="-1"
           />
         </div>
         <SubscriptionButton type="submit">

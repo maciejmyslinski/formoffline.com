@@ -4,5 +4,13 @@ module.exports = {
     description: '',
     keywords: '',
   },
-  plugins: [`gatsby-plugin-react-helmet`],
+  plugins: [
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-107751978-1',
+      },
+    },
+  ],
 }

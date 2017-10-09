@@ -23,12 +23,28 @@ const Header = styled.div`
   background-image: linear-gradient(142deg, #b388ff 0%, #7c4dff 100%);
   display: flex;
   flex-flow: column nowrap;
-  padding: 0 8px;
+  padding: 0 8px 96px;
+
+  @media (min-width: 425px) {
+    padding: 0 8px 192px;
+  }
+`
+
+const HeaderInner = styled.div`
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
 `
 
 const Logo = styled.img`
   margin: 24px auto 0;
   height: 72px;
+
+  @media (min-width: 425px) {
+    margin: 24px 0 0;
+    align-self: flex-start;
+  }
 `
 
 const Title = styled.h1`
@@ -37,13 +53,23 @@ const Title = styled.h1`
   font-weight: 400;
   line-height: 48px;
   margin: 72px auto 0;
+
+  @media (min-width: 425px) {
+    font-size: 56px;
+    line-height: 72px;
+  }
 `
 
 const Subtitle = styled.p`
-  margin: 24px auto 96px;
+  margin: 24px auto 0;
   font-size: 16px;
   line-height: 24px;
   text-align: center;
+
+  @media (min-width: 425px) {
+    font-size: 24px;
+    line-height: 48px;
+  }
 `
 
 const AppView = styled.img`
@@ -51,10 +77,20 @@ const AppView = styled.img`
   padding: 0 0 48px 0;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
   margin: 0 auto 96px;
+  width: 100vw;
+
+  @media (min-width: 425px) {
+    display: none;
+  }
 `
 
 const AppMockup = styled.img`
   display: none;
+
+  @media (min-width: 425px) {
+    display: block;
+    margin: -115px auto 0;
+  }
 `
 
 const Step = styled.div`
@@ -62,6 +98,7 @@ const Step = styled.div`
   padding: 0 8px;
   max-width: 100vw;
   overflow: hidden;
+  max-width: 675px;
 `
 
 const StepHeader = styled.div`
@@ -76,6 +113,11 @@ const StepNumber = styled.span`
   color: rgba(0, 0, 0, 0.08);
   flex: 0 0 64px;
   margin: 0 16px 0 0;
+
+  @media (min-width: 425px) {
+    font-size: 148px;
+    line-height: 144px;
+  }
 `
 
 const StepTitleWrapper = styled.div`
@@ -87,6 +129,11 @@ const StepTitle = styled.h2`
   line-height: 24px;
   font-weight: 400;
   margin: 24px 0 0;
+
+  @media (min-width: 425px) {
+    font-size: 34px;
+    line-height: 48px;
+  }
 `
 
 const StepDescription = styled.p`
@@ -94,6 +141,11 @@ const StepDescription = styled.p`
   line-height: 24px;
   color: rgba(0, 0, 0, 0.54);
   margin: 0;
+
+  @media (min-width: 425px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 `
 
 const StepImage = styled.img`
@@ -135,8 +187,9 @@ const PriceDescription = styled.p`
 `
 
 const Subscription = styled.div`
-  margin: 144px 0 120px;
+  margin: 144px auto 120px;
   padding: 8px;
+  max-width: 515px;
 `
 
 const SubscriptionIncentive = styled.p`
@@ -175,17 +228,19 @@ const SubscriptionButton = styled.button`
 const IndexPage = () => (
   <div>
     <Header>
-      <Logo
-        srcSet={`
+      <HeaderInner>
+        <Logo
+          srcSet={`
           ${logo},
           ${logo2x} 2x,
           ${logo3x} 3x
         `}
-        src={logo}
-        alt="Form Offline logo image"
-      />
-      <Title>Offline data collection app for Google Forms™</Title>
-      <Subtitle>so your employees waste no time wherever they are</Subtitle>
+          src={logo}
+          alt="Form Offline logo image"
+        />
+        <Title>Offline data collection app for Google Forms™</Title>
+        <Subtitle>so your employees waste no time wherever they are</Subtitle>
+      </HeaderInner>
     </Header>
     <AppView
       srcSet={`
